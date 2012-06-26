@@ -10,4 +10,5 @@ BenchErl was written by:
 * Katerina Roukounaki
 * Kostis Sagonas
 * Yiannis Tsiouris
+* Ioannis Venetis
 
