@@ -1,0 +1,127 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #dddddd;
+	font-family: sans-serif;;
+	font-size: 14px;
+}
+
+a {
+	color: fireBrick;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:visited {
+    color: fireBrick;
+    text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+    color: fireBrick;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#content {
+	width: 985px;
+	margin: 20px auto;
+	background-color: #ffffff;
+}
+
+#header {
+	padding: 20px;
+}
+
+#main {
+	margin: 20px 40px;
+	text-align: justify;
+	height: 380px;
+}
+
+#logo {
+	float: left;
+}
+
+#menu {
+	margin-top: 40px;
+	clear: both;
+	width: 100%;
+}
+
+#menu ul:after {
+	clear: both;
+	display: block;
+}
+
+#menu ul {
+	list-style: none outside none;	
+	margin: 0;
+	padding: 0;	
+	width: 100%;
+}
+
+#menu li {
+	float: left;
+	position: relative;
+	width: 160px;
+	line-height: 35px;
+	margin-left: 3px;
+	background-color: fireBrick;
+	color: white;
+	text-align: center;
+}
+
+#menu li a {
+	color: white;
+	font-weight: bold;
+}
+
+#menu li.selected {
+	background-color: black;
+}
+
+#footer {
+	text-align: center;
+	font-size: 11px;
+	margin-top: 20px;
+}
+
+#info {
+	color: fireBrick;
+	font-weight: bold;
+	font-size: 14px;
+	float: right;
+	margin-top: 20px;
+}
+
+#main .viewport { width: 880px; height: 360px; overflow: hidden; position: relative; }
+#main .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#main .thumb .end,
+#main .thumb { background-color: fireBrick; }
+#main .scrollbar { position: relative; float: right; width: 15px; }
+#main .track { background-color: white; height: 100%; width:13px; position: relative; padding: 0 1px; }
+#main .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+#main .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#main .disable{ display: none; }
+
+.gv_galleryWrap {
+	margin-left: 100px;
+}
+
+.bench-name {
+	font-weight: bold;
+	font-family: Courier;
+	font-size: 12px;
+	vertical-align: top;
+}
+
+.bench-description {
+	font-size: 12px;
+}
+
+h3 {
+	color: fireBrick;
+	margin-top: 30px;
+}
