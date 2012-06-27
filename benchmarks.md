@@ -3,9 +3,9 @@ title: Benchmarks
 index: 1
 ---
 
-At the moment, BenchErl consists of **14** benchmarks, which correspond to both **synthetic** and **real-world** use cases.
+At the moment, BenchErl consists of **14** benchmarks, which correspond to both [**synthetic**](#synthetic_benchmarks) and [**real-world**](#real_world) use cases.
 
-### SYNTHETIC BENCHMARKS
+### <a name="synthetic_benchmarks"></a> SYNTHETIC BENCHMARKS
 
 <table border="0" cellpadding="5">
 	<tr>
@@ -113,7 +113,7 @@ At the moment, BenchErl consists of **14** benchmarks, which correspond to both 
 	</tr>
 </table>
 
-### REAL-WORLD BENCHMARKS
+### <a name="real_world"></a> REAL-WORLD BENCHMARKS
 
 <table border="0" cellpadding="5">
 	<tr>

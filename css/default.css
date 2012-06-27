@@ -110,14 +110,15 @@ a:hover {
 	margin-left: 100px;
 }
 
-.bench-name {
+.bench-name, .option-name {
 	font-weight: bold;
 	font-family: Courier;
 	font-size: 12px;
 	vertical-align: top;
+	white-space: nowrap;
 }
 
-.bench-description {
+.bench-description, .option-description {
 	font-size: 12px;
 }
 
