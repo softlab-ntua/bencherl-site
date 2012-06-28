@@ -3,11 +3,17 @@ title: Download
 index: 3
 ---
 
-### DOWNLOAD THE SOURCE CODE
+* [Download the source code](#Download)
+* [Installation Instructions](#Installation)
+* [Supported Platforms](#Platforms)
+* [User Manual](#UserManual)
+* [Extending the Benchmark Suite](#Extending)
+
+### <a name="Download"></a> DOWNLOAD THE SOURCE CODE
 
 The latest source code for `BenchErl` is freely available on [github](https://github.com/k4t3r1n4/Bencherl).
 
-### INSTALLATION INSTRUCTIONS
+### <a name="Installation"></a> INSTALLATION INSTRUCTIONS
 
 The installation of BenchErl is straight-forward, as it follows the typical Unix/Linux approach. After downloading the source code, simply enter the directory `BenchErl`
 and type `make` at the command prompt:
@@ -23,7 +29,7 @@ Finally, if you would like to only build the applications then you have to run:
 
 	~ $ make app
 
-#### SUPPORTED PLATFORMS
+#### <a name="Platforms"></a> SUPPORTED PLATFORMS
 
 The benchmark suite has been tested on the following systems. It should however build and run on other Unix/Linux systems.
 
@@ -33,7 +39,7 @@ The benchmark suite has been tested on the following systems. It should however 
 * Fedora 16 x86-64
 	* Erlang/OTP version R14A, R14B, R14B01, R14B02, R14B03, R14B04, R15B, R15B01
 
-### USER MANUAL
+### <a name="UserManual"></a> USER MANUAL
 
 The purpose of the benchmark suite is to provide an easy way to execute a number of benchmarks with a combination of parameters. For example, we could be interested in running only the benchmarks
 `big` and `bang` on a number of different Erlang/OTP versions and for a number of schedulers, e.g., 1, 2, 4 and 8. The tool we have to use to achieve this is the script `bencherl`
@@ -124,7 +130,7 @@ The important part in configuring an execution of a set of benchmarks is perform
 	</tr>
 </table>
 
-#### Extending the benchmarks suite
+#### <a name="Extending"></a> EXTENDING THE BENCHMARK SUITE
 
 The benchmark suite is extensible and can be enhanced with new benchmarks, both synthetic and real-world. A few steps must be followed to add a new benchmark to the suite.
 
