@@ -124,3 +124,74 @@ The important part in configuring an execution of a set of benchmarks is perform
 	</tr>
 </table>
 
+#### Extending the benchmarks suite
+
+The benchmark suite is extensible and can be enhanced with new benchmarks, both synthetic and real-world. A few steps must be followed to add a new benchmark to the suite.
+
+If the benchmark is written for a real-world, open-source application, one can add this application in a directory under the suite's `app/` directory.
+This helps the benchmark suite to be self-contained.  It also allows the target application to be built and run with the same Erlang/OTP as the benchmark.
+
+The first step is to create a directory for the benchmark under the directory `bench/`. This is where everything related to the new benchmark will end up.
+
+In the new benchmark directory a few sub-directories have to be created. The first one is `src/`, where the benchmark's source code will reside.
+One needs to write a handler for the benchmark, which needs to reside in that directory. A *benchmark handler* is a standard Erlang
+module that has the same name with the benchmark and exports two functions: `bench_args/2` and `run/3`. Essentially, during execution of the benchmark the suite interacts with this module.
+
+Function `bench_args/2` has the following signature:
+
+	bench_args(Version, Conf) -> Args
+		when
+			Args :: [[term()]],
+			Conf   :: [{Key :: atom(), Val :: term()}, ...],
+			Version :: short | intermediate | long.
+
+It returns the different argument sets that should be used to run this `Version` of the benchmark. Information from the configuration 
+(`Conf`) of the benchmark can be used (e.g., the number of available cores), in order to generate an appropriate argument set for each execution environment.
+For example the `orbit_int` benchmark defines `bench_args/2` as follows:
+
+	bench_args(Version, Conf) ->
+		{_,Cores} = lists:keyfind(number_of_cores, 1, Conf),
+		[F1, F2, F3] = case Version of
+			short -> [fun bench:g13/1, 11, 2];
+			intermediate -> [fun bench:g124/1, 157, 2];
+			long -> [fun bench:g1245/1, 157, 2]
+		end,
+		[[IWP,G,N,W] || IWP <- [true,false], G <- [F1], N <- [F2 * Cores], W <- [F3 * Cores]].
+
+The parameters `G`, `N` and `W` are different for each size; on the other hand, the benchmark is run both with enabled and with disabled 
+intra-worker parallelism (i.e., with the parameter `IWP` being first `true` and then `false`).
+
+Function `run/3` has the following signature:
+
+	run(Args, Slaves, Conf) -> ok | {error, Reason}
+		when
+			Args   :: [term()],
+			Slaves :: [node()],
+			Conf   :: [{Key :: atom(), Val :: term()}, ...],
+			Reason :: term().
+
+It uses the arguments in `Args`, the slave nodes in `Slaves` and the settings in `Conf` to run the benchmark.
+The following is the definition of `run/3` in the `orbit_int` benchmark:
+
+	run([true,G,N,W|_], [], _) ->
+		io:format("~p~n", [apply(bench, par, [G,N,W])]);
+	run([false,G,N,W|_], [], _) ->
+		io:format("~p~n", [apply(bench, par_seq, [G,N,W])]);
+	run([true,G,N,W|_], Slaves, _) ->
+		io:format("~p~n", [apply(bench, dist, [G,N,W,Slaves])]);
+	run([false,G,N,W|_], Slaves, _) ->
+		io:format("~p~n", [apply(bench, dist_seq, [G,N,W,Slaves])]).
+
+This function ignores `Conf` and uses `Args` and `Slaves`, in order to calculate the orbit and display its size.
+Depending on whether intra-worker parallelism is enabled or not, and whether the benchmark is to
+run on multiple nodes, the appropriate function of module `bench` is called.
+
+Our benchmark directory can also contain a `conf/` directory. If we want to define a specific run configuration for our benchmark (that will
+override the run configuration of the suite), we can create a `bench.conf` file in the `conf/` sub-directory of our benchmark directory,
+and add all the settings in it. In other words, the `bench.conf` file overrides the settings of the global `run.conf` file. The `bench.conf` file
+can contain two more variables that are not specified in `run.conf`. These are `EXTRA_CODE_PATH`, which points to a directory that contains more
+BEAM files that are necessary for the execution of the benchmark, and `EXTRA_ERL_ARGS`, which contains more command-line arguments to pass to the `erl` program.
+
+The `conf/` directory can also contain two more files: a `pre_bench` and a `post_bench` file.
+These files serve as "hooks" that are called before and after the execution of a benchmark in a new runtime environment, respectively.
+Finally, in case our benchmark needs external data, we can put them in the `data/` sub-directory of `conf/`.
