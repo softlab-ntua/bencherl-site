@@ -97,14 +97,16 @@ a:hover {
 }
 
 #main .viewport { width: 880px; height: 360px; overflow: hidden; position: relative; }
-#main .overview { list-style: none; position: absolute; left: 0; top: 0; }
-#main .thumb .end,
-#main .thumb { background-color: fireBrick; }
-#main .scrollbar { position: relative; float: right; width: 15px; }
-#main .track { background-color: white; height: 100%; width:13px; position: relative; padding: 0 1px; }
-#main .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
-#main .thumb .end { overflow: hidden; height: 5px; width: 13px; }
-#main .disable{ display: none; }
+#benchmarks .viewport { width: 250px; height: 360px; overflow: hidden; position: relative; }
+#graphs .viewport { width: 630px; height: 360px; overflow: hidden; position: relative; }
+.scrollable .overview { list-style: none; position: absolute; left: 0; top: 0; }
+.scrollable .thumb .end,
+.scrollable .thumb { background-color: fireBrick; }
+.scrollable .scrollbar { position: relative; float: right; width: 15px; }
+.scrollable .track { background-color: white; height: 100%; width:13px; position: relative; padding: 0 1px; }
+.scrollable .thumb { height: 20px; width: 13px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+.scrollable .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+.scrollable .disable{ display: none; }
 
 .gv_galleryWrap {
 	margin-left: 100px;
@@ -130,4 +132,12 @@ h3 {
 h4 {
 	color: fireBrick;
 	margin-top: 20px;
+}
+
+#benchmarks {
+	float: left;
+}
+
+#graphs {
+	float: right;
 }

@@ -42,10 +42,15 @@ main = hakyll $ do
 		compile templateCompiler
 
 	-- Pages.
-	match (list ["index.md", "benchmarks.md", "results.md", "download.md", "people.md", "publications.md"]) $ do
+	match (list ["index.md", "benchmarks.md", "download.md", "people.md", "publications.md"]) $ do
 		route $ setExtension "html"
 		compile $ pageCompiler
 			>>> applyTemplateCompiler "templates/default.html"
 			>>> relativizeUrlsCompiler
-
+ 
+	match (list ["results.md"]) $ do
+        route $ setExtension "html"
+        compile $ pageCompiler
+            >>> applyTemplateCompiler "templates/results.html"
+            >>> relativizeUrlsCompiler
 

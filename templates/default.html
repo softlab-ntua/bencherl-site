@@ -8,15 +8,12 @@
 
 	<link rel="stylesheet" type="text/css" href="css/start/jquery-ui-1.8.21.custom.css" />
 	<link rel="stylesheet" type="text/css" href="css/default.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery.galleryview-3.0-dev.css"/>
 
 	<link rel="shortcut icon" href="favicon.ico"/>
 	
 	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
     <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
-    <script type="text/javascript" src="js/jquery.timers-1.2.js"></script>
-    <script type="text/javascript" src="js/jquery.galleryview-3.0-dev.js"></script>
 
 </head>
 <body>
@@ -42,7 +39,7 @@
 			</ul>
 			<br style="clear: both"/>
 		</div>
-		<div id="main">
+		<div id="main" class="scrollable">
 			<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
 			<div class="viewport">
 				<div class="overview">
@@ -58,19 +55,7 @@
 
     <script>
         (function($) {
-            $('#bulldozer-results').galleryView({
-                filmstrip_position: 'right',
-                enable_overlays: true,
-                overlay_position: 'top',
-                panel_animation: 'crossfade',
-                frame_width: 80,
-                frame_height: 40,
-                panel_width: 550,
-                panel_height: 290,
-                theme: 'light',
-				panel_scale: 'fit'
-            });
-			$('#main').tinyscrollbar();
+			$('#main, #benchmarks, #graphs').tinyscrollbar();
 			var index = $('#sindex').text();
 			$('#menu ul li').removeClass('selected');
 			$('#menu ul li:eq(' + index + ')').addClass('selected');
