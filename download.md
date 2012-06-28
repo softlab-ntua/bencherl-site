@@ -63,8 +63,7 @@ Only three options are accepted by `bencherl`:
 
 #### CONFIGURATION
 
-The important part in configuring an execution of a set of benchmarks is performed in the file `conf/run.conf`. This file contains a number of options that define the behavior of the execution to follow.
-The following paragraphs explain each of the available options. A hash character (`#`) in front of an option can be used to comment out that option and use its default value.
+The important part in configuring an execution of a set of benchmarks is performed in the file `conf/run.conf`. This file is a simple BASH script in which the user sets a number of variables that define the behavior of the execution to follow. The following paragraphs explain each of the available options.
 
 <table border="0" cellpadding="5">
 	<tr>
