@@ -33,9 +33,6 @@ The benchmark suite has been tested on the following systems. It should however 
 * Fedora 16 x86-64
 	* Erlang/OTP version R14A, R14B, R14B01, R14B02, R14B03, R14B04, R15B, R15B01
 
-#### PREREQUISITES
-???
-
 ### USER MANUAL
 
 The purpose of the benchmark suite is to provide an easy way to execute a number of benchmarks with a combination of parameters. For example, we could be interested in running only the benchmarks

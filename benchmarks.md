@@ -118,8 +118,19 @@ At the moment, BenchErl consists of **14** benchmarks, which correspond to both 
 <table border="0" cellpadding="5">
 	<tr>
 		<td class="bench-name">dialyzer_bench</td>
-		<td class="bench-description">Generates a Persistent Lookup Table (PLT) for the most common Erlang/OTP applications, and then uses this PLT to analyze all the major applications that are included in the Erlang/OTP distribution.</td>	
+		<td class="bench-description">
+			[Dialyzer](http://www.erlang.org/doc/apps/dialyzer/dialyzer_chapter.html) is a static analysis tool that identifies software discrepancies (e.g. definite type errors, unreachable code,
+			redundant tests) in single Erlang modules or entire applications. The benchmark generates a Persistent Lookup Table (PLT) for the most common Erlang/OTP applications,
+			and then uses this PLT to analyze all the major applications that are included in the Erlang/OTP distribution.
+		</td>
 	</tr>
-    <tr><td class="bench-name">scalaris_bench</td><td class="bench-description"></td></tr>
+	<tr>
+		<td class="bench-name">scalaris_bench</td>
+		<td class="bench-description">
+			[Scalaris](http://code.google.com/p/scalaris) is an Erlang implementation of a distributed key-value store, which has been designed for good horizontal scalability,
+			i.e., good performance for simple read/write operations distributed over many servers. The benchmark creates a ring with a certain number of Scalaris nodes, 
+			and spawns a certain number of processes on each one of them. Each process picks a random key and reads its value a certain number of times.
+		</td>
+	</tr>
 </table>
 
