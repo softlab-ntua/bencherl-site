@@ -1,9 +1,9 @@
 #!/bin/bash
 
-for f in `ls images/*.ps`; do
-	b=`basename $f .ps`
+for f in `ls images/graphs/*.eps`; do
+	b=`basename $f .eps`
 	echo "Converting $b..."
-	convert -density 150 -geometry 100% images/$b.ps images/$b.png
+	convert -density 150 -geometry 100% images/graphs/$b.eps images/graphs/$b.png
 done
 
 

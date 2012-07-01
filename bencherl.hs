@@ -26,6 +26,9 @@ main = hakyll $ do
 	match "images/*" $ do	
 		route idRoute
 		compile copyFileCompiler
+	match "images/graphs/*.png*" $ do
+		route idRoute
+		compile copyFileCompiler
 
 	-- Javascript files.
 	match "js/*" $ do
@@ -42,7 +45,7 @@ main = hakyll $ do
 		compile templateCompiler
 
 	-- Pages.
-	match (list ["index.md", "benchmarks.md", "download.md", "people.md", "publications.md"]) $ do
+	match (list ["index.md", "benchmarks.md", "howto.md", "people.md", "publications.md"]) $ do
 		route $ setExtension "html"
 		compile $ pageCompiler
 			>>> applyTemplateCompiler "templates/default.html"

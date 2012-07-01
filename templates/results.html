@@ -8,13 +8,14 @@
 
 	<link rel="stylesheet" type="text/css" href="css/start/jquery-ui-1.8.21.custom.css" />
 	<link rel="stylesheet" type="text/css" href="css/default.css"/>
-
+	<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css"/>
 	<link rel="shortcut icon" href="favicon.ico"/>
 	
 	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
     <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
     <script type="text/javascript" src="js/jquery.timers-1.2.js"></script>
+	<script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
 
 </head>
 <body>
@@ -34,7 +35,7 @@
 				<li><a href="index.html">HOME</a></li>
 				<li><a href="benchmarks.html">BENCHMARKS</a></li>
 				<li><a href="results.html">RESULTS</a></li>
-				<li><a href="download.html">DOWNLOAD</a></li>
+				<li><a href="howto.html">HOW TO...</a></li>
 				<li><a href="publications.html">PUBLICATIONS</a></li>
 				<li><a href="people.html">PEOPLE</a></li>
 			</ul>
@@ -54,7 +55,30 @@
                 <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
                 <div class="viewport">
                     <div class="overview">
-                    </div>
+						<div style="height: 700px">
+        				<a href="" class="lightbox" id="link-1" class="thickbox">
+							<img id="graph-1" src="" width="300" style="float: left" />
+						</a>
+                        <a href="" class="lightbox" id="link-2" class="thickbox">
+                        	<img id="graph-2" src="" width="300" style="float: right" />
+						</a>
+						<br style="clear: both" />
+                        <a href="" class="lightbox" id="link-3" class="thickbox">
+							<img id="graph-3" src="" width="300" style="float: left; margin-top: 20px" />
+                        </a>
+                        <a href="" class="lightbox" id="link-4" class="thickbox">
+							<img id="graph-4" src="" width="300" style="float: right; margin-top: 20px" />
+                        </a>
+						<br style="clear: both" />
+                        <a href="" class="lightbox" id="link-5" class="thickbox">
+                        	<img id="graph-5" src="" width="300" style="float: left; margin-top: 20px" />
+                        </a>
+                        <a href="" class="lightbox" id="link-6" class="thickbox">
+							<img id="graph-6" src="" width="300" style="float: right; margin-top: 20px" />			
+                        </a>
+						<br style="clear: both" />
+						</div>
+		            </div>
                 </div>
 			</div>
 		</div>
@@ -66,11 +90,42 @@
 
     <script>
         (function($) {
-			$('#benchmarks, #graphs').tinyscrollbar();
+			$('#benchmarks').tinyscrollbar();
+            $('#graphs').tinyscrollbar();
 			var index = $('#sindex').text();
 			$('#menu ul li').removeClass('selected');
 			$('#menu ul li:eq(' + index + ')').addClass('selected');
+			$('#benchmarks ul li:eq(0)').addClass('selected');
+			$('#benchmarks ul li').click(function() {
+				var _li = $(this);
+				$('#benchmarks ul li').removeClass('selected');
+				_li.addClass('selected');
+				sel();
+			});
+			sel();
         })(jQuery);
+
+		function sel() {
+			var _li = $('#benchmarks ul li.selected');
+			var bname = _li.text();
+			var i7 = 'Desktop with an i7-2600 CPU (3.40 GHz) and 8GB of RAM running Linux 2.6.32-5-amd64 (a total of four physical cores with hyperthreading; eight logical cores).';
+			var greedy = 'Server with four Intel Xeon E7340 CPUs (2.40 GHz) and 8GB of RAM running Linux 2.6.32-5-amd64 (a total of 16 cores).';
+			var bulldozer = 'Server with four AMD Opteron 6276 (2.3~GHz, 16~cores, 16M L2/16M L3 Cache) and 128~GB or RAM, running Linux 3.2.0-amd64 (a total of 64 cores).';
+
+			$('#graph-1').attr('src', 'images/graphs/' + bname + '-time-i7.png');
+			$('#link-1').attr('href', 'images/graphs/' + bname + '-time-i7.png').attr('title', i7);
+            $('#graph-2').attr('src', 'images/graphs/' + bname + '-speedup-i7.png');
+			$('#link-2').attr('href', 'images/graphs/' + bname + '-speedup-i7.png').attr('title', i7); 
+            $('#graph-3').attr('src', 'images/graphs/' + bname + '-time-greedy.png');
+			$('#link-3').attr('href', 'images/graphs/' + bname + '-time-greedy.png').attr('title', greedy);
+            $('#graph-4').attr('src', 'images/graphs/' + bname + '-speedup-greedy.png');
+			$('#link-4').attr('href', 'images/graphs/' + bname + '-speedup-greedy.png').attr('title', greedy);
+            $('#graph-5').attr('src', 'images/graphs/' + bname + '-time-bulldozer.png');
+			$('#link-5').attr('href', 'images/graphs/' + bname + '-time-bulldozer.png').attr('title', bulldozer); 
+            $('#graph-6').attr('src', 'images/graphs/' + bname + '-speedup-bulldozer.png');
+			$('#link-6').attr('href', 'images/graphs/' + bname + '-speedup-bulldozer.png').attr('title', bulldozer);
+			$('.lightbox').lightBox();
+		}
     </script>
 </body>
 

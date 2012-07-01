@@ -12,7 +12,7 @@ At the moment, BenchErl consists of **14** benchmarks, which correspond to both 
 		<td class="bench-name">bang</td>
 		<td class="bench-description">
 			A benchmark for many-to-one message passing that spawns one receiver and multiple senders that flood the receiver with messages.
-			The benchmark receives two parameters: (a) the number of senders to spawn and (b) the number of messages that each sender will send to the receiver.
+			The benchmark is parameterized by the number of senders to spawn and the number of messages that each sender will send to the receiver.
 		</td>
 	</tr>
 	<tr>
