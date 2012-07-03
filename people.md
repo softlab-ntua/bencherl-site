@@ -6,9 +6,9 @@ index: 5
 BenchErl was written by:
 
 * Stavros Aronis
-* Nikos Papaspyrou
+* [Nikos Papaspyrou](http://www.softlab.ntua.gr/~nickie)
 * Katerina Roukounaki
-* Kostis Sagonas
-* Yiannis Tsiouris
+* [Kostis Sagonas](http://user.it.uu.se/~kostis/)
+* [Yiannis Tsiouris](http://www.softlab.ntua.gr/~gtsiour/)
 * Ioannis Venetis
 
