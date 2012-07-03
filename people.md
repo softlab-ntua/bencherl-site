@@ -7,7 +7,7 @@ BenchErl was written by:
 
 * Stavros Aronis
 * [Nikos Papaspyrou](http://www.softlab.ntua.gr/~nickie)
-* Katerina Roukounaki
+* [Katerina Roukounaki](http://www.softlab.ntua.gr/~arou)
 * [Kostis Sagonas](http://user.it.uu.se/~kostis/)
 * [Yiannis Tsiouris](http://www.softlab.ntua.gr/~gtsiour/)
 * Ioannis Venetis
