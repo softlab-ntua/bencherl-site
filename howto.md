@@ -1,13 +1,13 @@
 ---
-title: HOW TO
+title: How to
 index: 3
 ---
 
-## Download
+### Download
 
 The latest source code for `BenchErl` is freely available on [github](https://github.com/k4t3r1n4/Bencherl).
 
-## Build
+### Build
 
 Run the following commands to build `BenchErl`:
 
@@ -26,7 +26,7 @@ If you want to build only the applications, run the following command:
 
 	~ $ make app
 
-## Use
+### Use
 
 Run `bencherl`:
 	
