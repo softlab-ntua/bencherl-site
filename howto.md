@@ -3,13 +3,11 @@ title: HOW TO
 index: 3
 ---
 
-Here you may find information about how to [download](#download), [build](#build), [use](#use), [configure](#configure) and [extend](#extend) `BenchErl`.
-
-### <a name="download"></a>DOWNLOAD
+## Download
 
 The latest source code for `BenchErl` is freely available on [github](https://github.com/k4t3r1n4/Bencherl).
 
-### <a name="build"></a>BUILD
+## Build
 
 Run the following commands to build `BenchErl`:
 
@@ -28,7 +26,7 @@ If you want to build only the applications, run the following command:
 
 	~ $ make app
 
-### <a name="use"></a>USE
+## Use
 
 Run `bencherl`:
 	
@@ -52,7 +50,7 @@ Run `bencherl`:
 	</tr>
 </table>
 
-#### <a name="configure"></a>CONFIGURE
+#### Configure
 
 In order to specify what you want to run and how you want to run it, you can use the `conf/run.conf` file (which is essentially a BASH script). Below you may find information about all the available configuration settings.
 
@@ -115,7 +113,7 @@ In order to specify what you want to run and how you want to run it, you can use
 	</tr>
 </table>
 
-#### <a name="extend"></a>EXTEND
+#### Extend
 
 `BenchErl` can be enhanced with new benchmarks, both synthetic and real-world.
 
