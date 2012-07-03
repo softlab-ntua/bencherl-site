@@ -11,27 +11,37 @@ The latest source code for `BenchErl` is freely available on [github](https://gi
 
 Run the following commands to build `BenchErl`:
 
-	~ $ cd bencherl
-	~ $ make
+~~~~~{.bash}
+$ cd bencherl
+$ make
+~~~~~
 
 If you need to clean up from previous builds before the new build, run the following command first:
 
-	~ $ make clean 
+~~~~~{.bash}
+$ make clean 
+~~~~~
 
 If you want to build only the benchmarks, run the following command:
 
-	~ $ make bench
+~~~~~{.bash}
+$ make bench
+~~~~~
 
 If you want to build only the applications, run the following command:
 
-	~ $ make app
+~~~~~{.bash}
+$ make app
+~~~~~
 
 ### Use
 
 Run `bencherl`:
-	
-	~ $ cd bencherl
-	~ $ ./bencherl  
+
+~~~~~{.bash}	
+$ cd bencherl
+$ ./bencherl  
+~~~~~
 
 `bencherl` has the following options:
 
@@ -123,22 +133,24 @@ Create a directory for the benchmark under the `bench/` directory.
 
 In the benchmark directory, create an `src/` directory. This is where the benchmark handler must reside. A **benchmark handler** is a standard Erlang module that has the same name with the benchmark and exports the following functions: 
 
-	%% Returns the arguments to use for running the specified version of the benchmark 
-	%% under the specified configuration settings.
-	bench_args(Vrsn, Conf) -> Args
-		when
-			Vrsn :: short | intermediate | long.
-            Conf   :: [{Key :: atom(), Val :: term()}, ...],
-            Args :: [[term()]],
+~~~~~{.bash}
+%% Returns the arguments to use for running the specified version of the benchmark 
+%% under the specified configuration settings.
+bench_args(Vrsn, Conf) -> Args
+  when
+    Vrsn :: short | intermediate | long.
+    Conf   :: [{Key :: atom(), Val :: term()}, ...],
+    Args :: [[term()]],
 
-	%% Runs the benchmark using the specified arguments, the specified slave nodes
-	%% and the specified configuration settings.
-	run(Args, Slaves, Conf) -> ok | {error, Reason}
-		when
-			Args   :: [term()],
-			Slaves :: [node()],
-			Conf   :: [{Key :: atom(), Val :: term()}, ...],
-			Reason :: term().
+%% Runs the benchmark using the specified arguments, the specified slave nodes
+%% and the specified configuration settings.
+run(Args, Slaves, Conf) -> ok | {error, Reason}
+  when
+    Args   :: [term()],
+    Slaves :: [node()],
+    Conf   :: [{Key :: atom(), Val :: term()}, ...],
+    Reason :: term().
+~~~~~
 
 The benchmark directory can also contain a `conf/` directory. If you want to specify different configuration settings for the benchmark (that will override those of the suite), then create a `bench.conf` file. If you want to perform any actions before or after the execution of the benchmark, then create a `pre_bench` or a `post_bench` file, respectively.
  
