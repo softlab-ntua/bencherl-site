@@ -14,8 +14,26 @@
 	
 	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.8.21.custom.min.js"></script>
-    <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
+        <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
 
+        <!-- Piwik -->
+        <script type="text/javascript">
+            var pkBaseURL = (("https:" == document.location.protocol) ?
+                    "https://83.212.96.183/stats/public_html/" :
+                    "http://83.212.96.183/stats/public_html/");
+            document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            try {
+                var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 4);
+                piwikTracker.trackPageView();
+                piwikTracker.enableLinkTracking();
+            } catch( err ) {}
+        </script>
+        <noscript><p>
+            <img src="http://83.212.96.183/stats/public_html/piwik.php?idsite=3" style="border:0" alt="" /></p>
+        </noscript>
+        <!-- End Piwik Tracking Code -->
 </head>
 <body>
 	<div id="sindex" style="display: none">$index$</div>
