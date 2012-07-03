@@ -1,5 +1,5 @@
 ---
-title: How to
+title: HOWTO
 index: 3
 ---
 
@@ -62,7 +62,7 @@ $ ./bencherl
         </tr>
 </table>
 
-#### Configure
+### Configure
 
 In order to specify what you want to run and how you want to run it, you can use
 the `conf/run.conf` file (which is essentially a BASH script). Below you may
@@ -127,7 +127,7 @@ find information about all the available configuration settings.
         </tr>
 </table>
 
-#### Extend
+### Extend
 
 `BenchErl` can be enhanced with new benchmarks, both synthetic and real-world.
 
@@ -141,7 +141,7 @@ benchmark handler must reside. A **benchmark handler** is a standard Erlang
 module that has the same name with the benchmark and exports the following
 functions:
 
-~~~~~{.bash}
+~~~~~{.erlang}
 %% Returns the arguments to use for running the specified version of the
 %% benchmark under the specified configuration settings.
 bench_args(Vrsn, Conf) -> Args
