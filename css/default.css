@@ -1,47 +1,47 @@
 body {
-	margin: 0;
-	padding: 0;
-	background-color: #dddddd;
-	font-family: sans-serif;;
-	font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background-color: #dddddd;
+    font-family: sans-serif;;
+    font-size: 14px;
 }
 
 a {
-	color: fireBrick;
-	text-decoration: none;
-	font-weight: bold;
+    color: fireBrick;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 a:visited {
     color: fireBrick;
     text-decoration: none;
-	font-weight: bold;
+    font-weight: bold;
 }
 
 a:hover {
     color: fireBrick;
-	text-decoration: none;
-	font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #content {
-	width: 985px;
-	margin: 20px auto;
-	background-color: #ffffff;
+    width: 985px;
+    margin: 20px auto;
+    background-color: #ffffff;
 }
 
 #header {
-	padding: 20px;
+    padding: 20px;
 }
 
 #main {
-	margin: 20px 40px;
-	text-align: justify;
-	height: 380px;
+    margin: 20px 40px;
+    text-align: justify;
+    height: 380px;
 }
 
 #logo {
-	float: left;
+    float: left;
 }
 
 #menu {
@@ -50,49 +50,49 @@ a:hover {
 }
 
 #menu ul:after {
-	clear: both;
-	display: block;
+    clear: both;
+    display: block;
 }
 
 #menu ul {
-	list-style: none outside none;	
-	margin: 0;
-	padding: 0;	
-	width: 100%;
+    list-style: none outside none;	
+    margin: 0;
+    padding: 0;	
+    width: 100%;
 }
 
 #menu li {
-	float: left;
-	position: relative;
-	width: 160px;
-	line-height: 35px;
-	margin-left: 3px;
-	background-color: fireBrick;
-	color: white;
-	text-align: center;
+    float: left;
+    position: relative;
+    width: 160px;
+    line-height: 35px;
+    margin-left: 3px;
+    background-color: fireBrick;
+    color: white;
+    text-align: center;
 }
 
 #menu li a {
-	color: white;
-	font-weight: bold;
+    color: white;
+    font-weight: bold;
 }
 
 #menu li.selected {
-	background-color: black;
+    background-color: black;
 }
 
 #footer {
-	text-align: center;
-	font-size: 11px;
-	margin-top: 20px;
+    text-align: center;
+    font-size: 11px;
+    margin-top: 20px;
 }
 
 #info {
-	color: fireBrick;
-	font-weight: bold;
-	font-size: 14px;
-	float: right;
-	margin-top: 20px;
+    color: fireBrick;
+    font-weight: bold;
+    font-size: 14px;
+    float: right;
+    margin-top: 20px;
 }
 
 #main .viewport { float: left; width: 880px; height: 360px; overflow: hidden; position: relative; }
@@ -108,7 +108,7 @@ a:hover {
 .scrollable .disable{ display: none; }
 
 .gv_galleryWrap {
-	margin-left: 100px;
+    margin-left: 100px;
 }
 
 .bench-name {
@@ -151,21 +151,21 @@ a:hover {
 }
 
 h3 {
-	color: fireBrick;
-	margin-top: 30px;
+    color: fireBrick;
+    margin-top: 30px;
 }
 
 h4 {
-	color: fireBrick;
-	margin-top: 20px;
+    color: fireBrick;
+    margin-top: 20px;
 }
 
 #benchmarks {
-	float: left;
+    float: left;
 }
 
 #graphs {
-	float: right;
+    float: right;
 }
 
 #benchmarks ul {
@@ -186,3 +186,6 @@ h4 {
 	color: fireBrick;
 }
 
+#abstract {
+    font-size: 13px;
+}
