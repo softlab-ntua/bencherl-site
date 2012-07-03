@@ -60,12 +60,14 @@ main = hakyll $ do
 
         -- Results page
         match "results.md" $ do
-        compile $ pageCompiler
-            >>> applyTemplateCompiler "templates/results.html"
-            >>> relativizeUrlsCompiler
+                route $ setExtension "html"
+                compile $ pageCompiler
+                        >>> applyTemplateCompiler "templates/results.html"
+                        >>> relativizeUrlsCompiler
   where
     withToc = defaultHakyllWriterOptions
-        { writerTableOfContents = True
-        , writerTemplate = "$toc$\n$body$"
-        , writerStandalone = True
+        {
+          writerStandalone = True
+        , writerTemplate = "<h2>Table of contents:</h2>$toc$\n$body$"
+        , writerTableOfContents = True
         }
