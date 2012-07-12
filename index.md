@@ -7,7 +7,7 @@ BenchErl is a publicly available scalability benchmark suite for applications wr
 
 ### Motivation
 
-The intuitive parallelization model provided by Erlang is one of its most advertised features. However, understanding the behaviour of a parallel Erlang application and most importantly detect the bottlenecks that hinder the exploitation of a large number of processors has not been an easy task. A tool that would help towards this has been missing for Erlang. The features included in BenchErl allow the execution of applications under different parameters, the visualization of results and the extraction of useful conclusions. Hence, it is a first step to better understand the parameters that affect the parallel execution of Erlang applications.
+The concurrency model of Erlang is one of its most advertised features. However, understanding the behaviour of a highly concurrent Erlang application and most importantly detecting the bottlenecks that hinder the exploitation of a large number of processors has not been an easy task. A tool that would help towards this has been missing for Erlang. The features included in BenchErl allow the execution of applications under different parameters, the visualization of results and the extraction of useful conclusions. Hence, it is a first step to better understand the parameters that affect the parallel execution of Erlang applications.
 
 ### Key features
 

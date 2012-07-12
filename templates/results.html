@@ -26,7 +26,7 @@
 				<img src="images/logo.png" width="300px"/>
 			</div>
 			<div id="info">
-				A scalability benchmark suite for Erlang/OTP.
+				A Scalability Benchmark Suite for Erlang/OTP
 			</div>
 			<br style="clear: both"/>
 		</div>
@@ -44,18 +44,10 @@
 		<div id="main">
 	
 			<div id="benchmarks" class="scrollable">
-				<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
-				<div class="viewport">
-					<div class="overview">
 						$body$
-					</div>
-				</div>
 			</div>
 			<div id="graphs" class="scrollable">
-                <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
-                <div class="viewport">
-                    <div class="overview">
-						<div style="height: 700px">
+						<div>
         				<a href="" class="lightbox" id="link-1" class="thickbox">
 							<img id="graph-1" src="" width="300" style="float: left" />
 						</a>
@@ -78,9 +70,8 @@
                         </a>
 						<br style="clear: both" />
 						</div>
-		            </div>
-                </div>
 			</div>
+			<br style="clear: both"/>
 		</div>
 		<div id="footer">
             Copyright &copy; 2011-2014 <a target="_blank" href="http://release-project.eu">RELEASE Project</a><br/>
@@ -90,8 +81,8 @@
 
     <script>
         (function($) {
-			$('#benchmarks').tinyscrollbar();
-            $('#graphs').tinyscrollbar();
+			//$('#benchmarks').tinyscrollbar();
+            //$('#graphs').tinyscrollbar();
 			var index = $('#sindex').text();
 			$('#menu ul li').removeClass('selected');
 			$('#menu ul li:eq(' + index + ')').addClass('selected');

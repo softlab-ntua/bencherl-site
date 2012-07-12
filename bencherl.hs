@@ -30,6 +30,11 @@ main = hakyll $ do
                 route idRoute
                 compile copyFileCompiler
 
+		-- Files.
+        match "files/*" $ do
+                route idRoute
+                compile copyFileCompiler
+
         -- Javascript files.
         match "js/*" $ do
                 route idRoute

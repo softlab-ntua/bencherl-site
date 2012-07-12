@@ -37,7 +37,8 @@ a:hover {
 #main {
     margin: 20px 40px;
     text-align: justify;
-    height: 380px;
+    /*height: 380px;*/
+	min-height: 200px;
 }
 
 #logo {
@@ -95,9 +96,9 @@ a:hover {
     margin-top: 20px;
 }
 
-#main .viewport { float: left; width: 880px; height: 360px; overflow: hidden; position: relative; }
-#benchmarks .viewport { float: left; width: 240px; height: 360px; overflow: hidden; position: relative; }
-#graphs .viewport { float: left; width: 630px; height: 360px; overflow: hidden; position: relative; }
+#main .viewport { float: left; width: 880px; /*height: 360px;*/ overflow: hidden; position: relative; }
+#benchmarks .viewport { float: left; width: 240px; /*height: 360px;*/ overflow: hidden; position: relative; }
+#graphs .viewport { float: left; width: 630px; /*height: 360px;*/ overflow: hidden; position: relative; }
 .scrollable .overview { list-style: none; position: absolute; left: 0; top: 0; }
 .scrollable .thumb .end,
 .scrollable .thumb { background-color: fireBrick; }
@@ -201,4 +202,8 @@ pre code {
     display: block;
     padding: 8px;
     margin-bottom: 2em;
+}
+
+.paper {
+	margin-top: 20px;
 }
