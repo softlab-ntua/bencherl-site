@@ -1,9 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #dddddd;
     font-family: sans-serif;;
     font-size: 14px;
+}
+
+ul {
+	padding-left: 18px;
 }
 
 a {
@@ -26,7 +29,7 @@ a:hover {
 
 #content {
     width: 985px;
-    margin: 20px auto;
+    margin: 0px auto;
     background-color: #ffffff;
 }
 
@@ -35,9 +38,8 @@ a:hover {
 }
 
 #main {
-    margin: 20px 40px;
+    margin: 50px 40px 20px 40px;
     text-align: justify;
-    /*height: 380px;*/
 	min-height: 200px;
 }
 
@@ -85,15 +87,15 @@ a:hover {
 #footer {
     text-align: center;
     font-size: 11px;
-    margin-top: 20px;
+    margin-top: 60px;
+	margin-bottom: 20px;
 }
 
 #info {
-    color: fireBrick;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 22px;
     float: right;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 #main .viewport { float: left; width: 880px; /*height: 360px;*/ overflow: hidden; position: relative; }
@@ -206,4 +208,36 @@ pre code {
 
 .paper {
 	margin-top: 20px;
+}
+
+.code {
+	font-family: Courier;
+}
+
+.bench-description br {
+	height: 10px;
+}
+
+.math {
+	font-family: Courier;
+	font-style: normal;
+}
+
+.math em {
+	font-style: normal;
+}
+
+.people li {
+	padding-top: 10px;
+}
+
+.paperpres a {
+	display: block;
+	float: right;
+	width: 100px;
+	text-align: right;
+}
+
+.abstract {
+	font-size: 12px;
 }

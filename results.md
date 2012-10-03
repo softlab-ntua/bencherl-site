@@ -3,8 +3,7 @@ title: Results
 index: 2
 ---
 
-#### Synthetic benchmarks
-* bang
+#### SYNTHETIC BENCHMARKS
 * big
 * ehb
 * ets_test
@@ -18,7 +17,7 @@ index: 2
 * serialmsg
 * timer_wheel
 
-#### Real-world benchmarks
+#### REAL-WORLD BENCHMARKS
 * dialyzer_bench
 * scalaris_bench
 

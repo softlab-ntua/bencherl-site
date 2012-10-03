@@ -59,7 +59,7 @@ main = hakyll $ do
         -- How-to page (w/ TOC)
         match "howto.md" $ do
                 route $ setExtension "html"
-                compile $ pageCompilerWith defaultHakyllParserState withToc
+                compile $ pageCompiler 
                         >>> applyTemplateCompiler "templates/default.html"
                         >>> relativizeUrlsCompiler
 
@@ -69,10 +69,3 @@ main = hakyll $ do
                 compile $ pageCompiler
                         >>> applyTemplateCompiler "templates/results.html"
                         >>> relativizeUrlsCompiler
-  where
-    withToc = defaultHakyllWriterOptions
-        {
-          writerStandalone = True
-        , writerTemplate = "<h2>Table of contents:</h2>$toc$\n$body$"
-        , writerTableOfContents = True
-        }
