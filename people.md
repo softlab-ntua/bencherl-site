@@ -13,3 +13,14 @@ BenchErl was written by:
 * [Yiannis Tsiouris](http://www.softlab.ntua.gr/~gtsiour/)
 * Ioannis Venetis
 </div>
+
+<p>&nbsp;</p>
+
+with significant contributions by:
+
+<div class="people">
+* Kenneth Lundin, Rickard Green and Patrik Nyblom *(gave us the first versions of the synthetic benchmarks)*
+* Patrick Maier *(wrote Orbit benchmark)*
+* Nico Kruber *(helped us with Scalaris benchmark)*
+</div>
+

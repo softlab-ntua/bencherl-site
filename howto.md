@@ -130,7 +130,7 @@ you may set in this particular file.
         </tr>
 </table>
 
-#### HOW TO EXTEND IT
+####<a id="extend">HOW TO EXTEND IT</a>
 
 BenchErl can be enhanced with new benchmarks, both synthetic and real-world.
 
@@ -150,8 +150,8 @@ functions:
 bench_args(Version, Conf) -> Args
     when
         Version :: short | intermediate | long.
-        Conf   :: [{Key :: atom(), Val :: term()}, ...],
-        Args :: [[term()]],
+        Conf    :: [{Key :: atom(), Val :: term()}, ...],
+        Args    :: [[term()]],
 ~~~~~
 
 ~~~~~{.erlang}
@@ -185,3 +185,6 @@ actions before or after the execution of the benchmark, then create a
 
 If the benchmark needs any external data, create a <span class="code">data/</span> directory in the
 benchmark directory and put them in there.
+
+If you consider your new benchmark worth for inclusion in BenchErl, send a 
+mail to **release AT softlab DOT ntua DOT gr**, or issue a pull request on [github](https://github.com/softlab-ntua/bencherl).
