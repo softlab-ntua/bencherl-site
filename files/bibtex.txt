@@ -1,7 +1,7 @@
 @inproceedings{Aronis:2012:SBS:2364489.2364495,
  author = {Aronis, Stavros and Papaspyrou, Nikolaos and Roukounaki, Katerina and Sagonas, Konstantinos and Tsiouris, Yiannis and Venetis, Ioannis E.},
  title = {A scalability benchmark suite for Erlang/OTP},
- booktitle = {Proceedings of the eleventh ACM SIGPLAN workshop on Erlang workshop},
+ booktitle = {Proceedings of the eleventh ACM SIGPLAN workshop on Erlang},
  series = {Erlang '12},
  year = {2012},
  isbn = {978-1-4503-1575-3},

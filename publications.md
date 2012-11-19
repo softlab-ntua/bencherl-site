@@ -27,7 +27,7 @@ current set of benchmarks. We also report some limited set of performance
 results in order to show the capabilities of our suite.</p>
 
 <div class="paperpres">
-    <a target="_blank" href="files/bibtex.txt" style="width:100px">BibTex</a>
+    <a target="_blank" href="files/bibtex.txt" style="width:100px">BibTeX</a>
     <a target="_blank" href="files/bencherl-presentation.pdf" style="width:150px">PRESENTATION</a>
 	<a target="_blank" href="files/erlang01-aronis.pdf" style="width:80px">PAPER</a>
 </div>
