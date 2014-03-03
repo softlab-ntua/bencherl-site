@@ -24,17 +24,11 @@ first:
 $ make clean
 ~~~~~
 
-If you want to build only the benchmarks, run the following command:
+If you want to build the web interface of BenchErl, run the following command:
 
-~~~~~{.bash}
-$ make bench
-~~~~~
-
-If you want to build only the applications, run the following command:
-
-~~~~~{.bash}
-$ make app
-~~~~~
+~~~~{.bash}
+$ make ui
+~~~~
 
 #### HOW TO USE IT
 
@@ -73,13 +67,13 @@ you may set in this particular file.
         <tr>
                 <td class="configuration-name">CHECK_SANITY=[0|1]</td>
                 <td class="configuration-description">If set to <span class="code">1</span>, a sanity check will be performed on the results that each benchmark produced during its execution.</td>      
-		</tr>
+	</tr>
         <tr>
                 <td class="configuration-name">COOKIE=&lt;Cookie&gt;</td>
                 <td class="configuration-description">The cookie that will be set on all Erlang nodes that will be used for running the benchmark. The default cookie is <span class="code">cookie</span>.<
 /td>
         </tr>
-         <tr>
+        <tr>
                 <td class="configuration-name">ERL_ARGS=&lt;Alias1=Args1,Alias2=Args2,...&gt;</td>
                 <td class="configuration-description">A comma-separated list of command-line argument sets to pass to the <span class="code">erl</span> program. An alias must be specified for each argument set. The default value is <span class="code">DEF_ARGS=</span>.</td>
         </tr>
@@ -110,7 +104,7 @@ you may set in this particular file.
         </tr>
         <tr>
                 <td class="configuration-name">OTPS=&lt;Alias1=Path1,Alias2=Path2,...&gt;</td>
-                <td class="configuration-description">A comma-separated list of Erlang/OTP versions to run the benchmarks with. For each Erlang/OTP version, you must specify a unique alias and the path that leads to it. The default value is <span class="code">DEF_OTP=</span>.</td>
+                <td class="configuration-description">A comma-separated list of Erlang/OTP versions to compile and run the benchmarks with. For each Erlang/OTP version, you must specify a unique alias and the path that leads to it. The default value is <span class="code">DEF_OTP=</span>.</td>
         </tr>
         <tr>
                 <td class="configuration-name">PLOT=[0|1]</td>
@@ -178,6 +172,23 @@ those of the suite), then create a <span class="code">bench.conf</span> file in 
 * <span class="code">OTPS</span>
 * <span class="code">PLOT</span>
 * <span class="code">SLAVE_NODES</span>  
+
+In the <span class="code">bench.conf</span> file, you may also set the following variables:
+<table border="0" cellpadding="5">
+        <tr>
+                <td class="configuration-name">DEPENDENCIES=&lt;App1,App2,...&gt;</td>
+                <td class="configuration-description">A comma-separated list of the internal applications that the benchmark depend on. By default, the benchmark depends on no application.</td>
+        </tr>
+        <tr>
+                <td class="configuration-name">EXTRA_CODE_PATH=&lt;Path1 Path2...&gt;</td>
+                <td class="configuration-description">A space-separated list of directories to add to the code path when executing the benchmark. By default, no extra directories are added to the code path.</td>
+        </tr>
+        <tr>
+                <td class="configuration-name">EXTRA_ERL_ARGS=&lt;Arg1 Arg2...&gt;</td>
+                <td class="configuration-description">A space-separated list of command-line arguments to pass to the `erl` program when running the benchmark. By default, no extra arguments are passed.</td>
+        </tr>
+
+</table>
 
 If you want to perform any
 actions before or after the execution of the benchmark, then create a
